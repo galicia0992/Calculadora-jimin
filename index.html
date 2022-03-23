@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Calculator app</title>
+</head>
+<body>
+  <div class="contenedor d-flex justify-content-center align-items-center">
+    <div class="d-flex flex-column">
+      <div class="head d-flex flex-row justify-content-between mb-2">
+        <div class="calc">calc</div>
+        <div class="theme">THEME</div>
+      </div>
+      <div class="pantalla mb-2 d-flex align-items-center justify-content-end p-3">
+        <span id="pantallaResultado">0</span>
+      </div>
+      <div class="teclas d-flex flex-column align-items-center p-3">
+        <div class="d-flex justify-content-center w-100">
+          <button class="btn btn-light boton" value="7" id="siete">7</button>
+          <button class="btn btn-light boton" value="8" id="ocho">8</button>
+          <button class="btn btn-light boton" value="9" id="nueve">9</button>
+          <button class="btn btn-secondary botonDel" id="del">DEL</button>
+        </div>
+        <div class="d-flex justify-content-center w-100">
+          <button class="btn btn-light boton" value="4" id="cuatro">4</button>
+          <button class="btn btn-light boton" value="5" id="cinco">5</button>
+          <button class="btn btn-light boton" value="6" id="seis">6</button>
+          <button class="btn btn-light botonOp" value="+" id="mas">+</button>
+        </div>
+        <div class="d-flex justify-content-center w-100">
+          <button class="btn btn-light boton" value="1" id="uno">1</button>
+          <button class="btn btn-light boton" value="2" id="dos">2</button>
+          <button class="btn btn-light boton" value="3" id="tres">3</button>
+          <button class="btn btn-light botonOp" value="-" id="menos">-</button>
+        </div>
+        <div class="d-flex justify-content-center w-100">
+          <button class="btn btn-light boton" value="." id="punto">.</button>
+          <button class="btn btn-light boton" value="0" id="cero">0</button>
+          <button class="btn btn-light boton" value="/" id="entre">/</button>
+          <button class="btn btn-light botonOp" value="*" id="por">*</button>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-secondary btn-reset" id="reset">RESET</button>
+          <button class="btn btn-danger btn-igual" id="igual">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="/js/main.js"></script>
+</html>
