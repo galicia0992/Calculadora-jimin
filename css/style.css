@@ -38,6 +38,10 @@ body{
 .btn-igual{
     width: 7.7rem;
 }
+.btn-voice{
+    width: 5.7rem;
+    margin-right: 10px;
+}
 .btn-reset{
     width: 7.7rem;
     margin-right: 0.7rem;

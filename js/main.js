@@ -28,6 +28,9 @@ const teclaDivision = document.querySelector("#entre")
 const teclaReset = document.querySelector("#reset")
 const teclaDel = document.querySelector("#del")
 
+//tecla voz
+const voice = document.querySelector("#voice")
+
 eventListeners()
 
 function eventListeners(){
@@ -55,6 +58,9 @@ function eventListeners(){
 
     //borrar ultimo numero
     teclaDel.addEventListener("click",borrarUltimo)
+
+    //operacion por voz
+    voice.addEventListener("click", operacionVoz)
 }
 
 let memoria = []
@@ -162,4 +168,25 @@ function borrarUltimo(){
     if(resultado.innerHTML = " "){
         resultado.innerHTML = 0
     }
+}
+
+function operacionVoz(){
+    const SpeechRecognition = webkitSpeechRecognition
+    const recognition = new SpeechRecognition()
+
+    recognition.start()
+    recognition.onstart = function(){
+        resultado.innerHTML = "escuchando..."
+    }
+    recognition.onspeechend = function(){
+        recognition.stop()
+        
+    }
+    recognition.onresult = function(e){
+        const res = e.results[0][0].transcript
+        let resultVoz = eval(res)
+        resultado.innerHTML = resultVoz
+        memoria.push(resultVoz)
+    }
+    
 }
